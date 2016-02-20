@@ -1,0 +1,44 @@
+<!--suppress AndroidDomInspection -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- ROW 1-->
+        <View
+            android:id="@+id/blue"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/blue"
+            app:layout_widthPercent="50%"
+            app:layout_aspectRatio="100%"/>
+
+        <View
+            android:id="@+id/orange"
+            android:layout_gravity="center_horizontal"
+            android:layout_toRightOf="@id/blue"
+            android:background="@color/orange"
+            app:layout_widthPercent="50%"
+            app:layout_aspectRatio="50%"
+           />
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+</LinearLayout>
