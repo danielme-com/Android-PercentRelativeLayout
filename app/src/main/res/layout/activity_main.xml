@@ -1,11 +1,11 @@
 <!--suppress AndroidDomInspection -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".MainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -25,18 +25,55 @@
             android:id="@+id/blue"
             android:layout_gravity="center_horizontal"
             android:background="@color/blue"
-            app:layout_widthPercent="50%"
-            app:layout_aspectRatio="100%"/>
+            app:layout_heightPercent="@fraction/half"
+            app:layout_widthPercent="@fraction/half_margin"
+            app:layout_marginLeftPercent="@fraction/margin"/>
 
         <View
             android:id="@+id/orange"
             android:layout_gravity="center_horizontal"
             android:layout_toRightOf="@id/blue"
             android:background="@color/orange"
-            app:layout_widthPercent="50%"
-            app:layout_aspectRatio="50%"
-           />
+            app:layout_heightPercent="@fraction/half"
+            app:layout_widthPercent="@fraction/half_margin"
+            app:layout_marginRightPercent="@fraction/margin"/>
 
+        <!-- ROW 2-->
+
+        <View
+            android:id="@+id/teal"
+            android:layout_below="@id/blue"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/teal"
+            app:layout_heightPercent="@fraction/half"
+            app:layout_widthPercent="@fraction/quarter" />
+
+        <View
+            android:id="@+id/red"
+            android:layout_below="@id/blue"
+            android:layout_gravity="center_horizontal"
+            android:layout_toRightOf="@id/teal"
+            android:background="@color/red"
+            app:layout_heightPercent="@fraction/half"
+            app:layout_widthPercent="@fraction/quarter" />
+
+        <View
+            android:id="@+id/brown"
+            android:layout_below="@id/orange"
+            android:layout_gravity="center_horizontal"
+            android:layout_toRightOf="@id/red"
+            android:background="@color/brown"
+            app:layout_heightPercent="@fraction/half"
+            app:layout_widthPercent="@fraction/quarter" />
+
+        <View
+            android:id="@+id/bluegray"
+            android:layout_below="@id/orange"
+            android:layout_gravity="center_horizontal"
+            android:layout_toRightOf="@id/brown"
+            android:background="@color/bluegrey"
+            app:layout_heightPercent="@fraction/half"
+            app:layout_widthPercent="@fraction/quarter" />
 
     </android.support.percent.PercentRelativeLayout>
 
